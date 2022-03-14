@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "jest": true
+  },
+  "extends": ["airbnb", "airbnb/hooks", "airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "project": "./tsconfig.eslint.json"
+  },
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "exceptions": ["LazyComponent"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "no-use-before-define": ["error", "nofunc"],
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off"
+  }
+}
