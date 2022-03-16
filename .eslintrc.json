@@ -13,6 +13,7 @@
     "project": "./tsconfig.eslint.json"
   },
   "rules": {
+    "@typescript-eslint/no-use-before-define": ["error", "nofunc"],
     "no-param-reassign": [
       "error",
       {
@@ -26,14 +27,15 @@
         "exceptions": ["LazyComponent"]
       }
     ],
-    "import/no-extraneous-dependencies": [
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    // https://github.com/import-js/eslint-plugin-import/issues/2181
+    "import/no-import-module-exports": [
       "error",
       {
-        "devDependencies": true
+        "exceptions": ["**/src/index.tsx"]
       }
-    ],
-    "no-use-before-define": ["error", "nofunc"],
-    "import/prefer-default-export": "off",
-    "object-curly-newline": "off"
+    ]
   }
 }
