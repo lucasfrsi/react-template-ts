@@ -1,0 +1,15 @@
+{
+  "i18nFeature": {
+    "language": "language"
+  },
+  "themesFeature": {
+    "selectTheme": "select a theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "404": {
+    "message": "Page not found.",
+    "returnToHomePage": "return to home page"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "i18nFeature": {
+    "language": "idioma"
+  },
+  "themesFeature": {
+    "selectTheme": "selecione um tema",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Escuro"
+  },
+  "404": {
+    "message": "Página não encontrada.",
+    "returnToHomePage": "retornar à página inicial"
+  }
+}

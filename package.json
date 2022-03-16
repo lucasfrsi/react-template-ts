@@ -25,7 +25,7 @@
     "// ---TESTING---": "",
     "test": "jest",
     "test:ci": "jest --watchAll=false --ci --coverage",
-    "test:updateSnapshots": "jest -u",
+    "test:snap": "jest -u",
     "test:watch": "jest --watch",
     "// ---UTILS---": "",
     "bundle:analyze": "webpack --node-env production --analyze",
