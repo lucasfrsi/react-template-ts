@@ -1,4 +1,4 @@
-import createMountElement from 'utils/createMountElement';
+import { createMountElement } from 'utils';
 
 describe('', () => {
   it('should create and append an element to the document', () => {

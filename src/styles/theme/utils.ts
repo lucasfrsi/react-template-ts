@@ -1,4 +1,4 @@
-import { localStorageAvailable } from 'utils/checkStorage';
+import { localStorageAvailable } from 'utils';
 import { ThemeKeyType } from './slice/types';
 
 /* istanbul ignore next line */

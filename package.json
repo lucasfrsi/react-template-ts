@@ -34,7 +34,7 @@
     "clean:coverage": "rm -rf coverage",
     "clean:node": "rm -rf node_modules",
     "clean": "rm -rf build coverage node_modules",
-    "// ---PRE & POST---": "",
+    "// ---HUSKY---": "",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -175,14 +175,14 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/__mocks__/fileMock.ts",
       "^assets/(.*)$": "<rootDir>/src/app/assets/$1",
       "^components/(.*)$": "<rootDir>/src/app/components/$1",
-      "^hooks/(.*)$": "<rootDir>/src/app/hooks/$1",
+      "^hooks$": "<rootDir>/src/app/hooks",
       "^pages/(.*)$": "<rootDir>/src/app/pages/$1",
       "^lib/(.*)$": "<rootDir>/src/lib/$1",
       "^locales/(.*)$": "<rootDir>/src/locales/$1",
       "^services/(.*)$": "<rootDir>/src/services/$1",
       "^store/(.*)$": "<rootDir>/src/store/$1",
       "^styles/(.*)$": "<rootDir>/src/styles/$1",
-      "^utils/(.*)$": "<rootDir>/src/utils/$1"
+      "^utils$": "<rootDir>/src/utils"
     },
     "watchPlugins": [
       "jest-watch-typeahead/filename",

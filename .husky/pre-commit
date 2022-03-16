@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# npm run checkTs
+npm run checkTs
 npx lint-staged

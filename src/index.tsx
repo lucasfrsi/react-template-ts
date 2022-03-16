@@ -8,9 +8,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
+import { createMountElement } from 'utils';
 import ThemeProvider from './styles/theme/ThemeProvider';
 import store from './store';
-import createMountElement from './utils/createMountElement';
 import reportWebVitals from './reportWebVitals';
 
 // Initialize i18n

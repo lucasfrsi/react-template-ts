@@ -26,4 +26,6 @@ const storageAvailable = (type: string) => {
   }
 };
 
-export const localStorageAvailable = storageAvailable('localStorage');
+const localStorageAvailable = storageAvailable('localStorage');
+
+export default localStorageAvailable;

@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import lazyLoad from 'utils/loadable';
+import { lazyLoad } from 'utils';
 import styled from 'styled-components';
 import LoadingIndicator from '../../components/LoadingIndicator';
 

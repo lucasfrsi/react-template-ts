@@ -133,7 +133,6 @@ module.exports = () => {
     };
 
     config.plugins.push(new ReactRefreshWebpackPlugin());
-    // ForkTsCheckerWebpackPlugin only in DEV?
 
     config.devtool = 'eval-source-map';
   }
