@@ -1,11 +1,10 @@
-/**
- * Combine all reducers in this file and export the combined reducers.
- */
 import { combineReducers } from '@reduxjs/toolkit';
 import themeReducer from 'styles/theme/slice';
+import pokemonReducer from 'pages/HomePage/Pokemon/slice';
 
 const rootReducer = combineReducers({
   theme: themeReducer,
+  pokemon: pokemonReducer,
 });
 
 export default rootReducer;

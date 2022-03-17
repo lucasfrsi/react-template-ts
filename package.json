@@ -176,6 +176,7 @@
       "^assets/(.*)$": "<rootDir>/src/app/assets/$1",
       "^components/(.*)$": "<rootDir>/src/app/components/$1",
       "^hooks$": "<rootDir>/src/app/hooks",
+      "^interfaces$": "<rootDir>/src/app/interfaces",
       "^pages/(.*)$": "<rootDir>/src/app/pages/$1",
       "^lib/(.*)$": "<rootDir>/src/lib/$1",
       "^locales/(.*)$": "<rootDir>/src/locales/$1",

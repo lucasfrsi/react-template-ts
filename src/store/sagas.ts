@@ -1,17 +1,6 @@
 import { all } from 'redux-saga/effects';
-// import postsSagas from './posts';
+import pokemonSagas from 'pages/HomePage/Pokemon/slice/saga';
 
 export default function* rootSaga() {
-  yield all([
-    // ...postsSagas,
-  ]);
+  yield all([...pokemonSagas]);
 }
-
-// WATCHERS EXPORT
-// const postsSagas = [
-//   fork(watchGetPostsRequest),
-//   fork(watchCreatePostRequest),
-//   fork(watchDeletePostRequest),
-// ];
-
-// export default postsSagas;

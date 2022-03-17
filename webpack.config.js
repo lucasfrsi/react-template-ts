@@ -40,6 +40,7 @@ module.exports = () => {
         assets: path.join(__dirname, 'src', 'app', 'assets'),
         components: path.join(__dirname, 'src', 'app', 'components'),
         hooks: path.join(__dirname, 'src', 'app', 'hooks'),
+        interfaces: path.join(__dirname, 'src', 'app', 'interfaces'),
         pages: path.join(__dirname, 'src', 'app', 'pages'),
         lib: path.join(__dirname, 'src', 'lib'),
         locales: path.join(__dirname, 'src', 'locales'),
