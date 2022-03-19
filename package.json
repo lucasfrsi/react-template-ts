@@ -29,7 +29,7 @@
     "test:watch": "jest --watch",
     "// ---UTILS---": "",
     "bundle:analyze": "webpack --node-env production --analyze",
-    "checkTs": "tsc --noEmit",
+    "check:ts": "tsc --noEmit",
     "clean:build": "rm -rf build",
     "clean:coverage": "rm -rf coverage",
     "clean:node": "rm -rf node_modules",

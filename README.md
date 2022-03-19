@@ -1,9 +1,13 @@
 <h1 align="center">
   React Template
   <br>
-  <small>
-    for scalable and performance focused projects
-  </small>
+  <sup>
+    <sub>
+      <i>
+        for scalable and performance focused projects
+      </i>
+    </sub>
+  </sup>
 </h1>
 
 <p align="center">
@@ -35,7 +39,7 @@
   </a>
   &nbsp;·&nbsp;
   <a href="https://github.com/lucasfrsi/react-template-ts/pulls">
-    Create Pull Request
+    Create a Pull Request
   </a>
   &nbsp;·&nbsp;
   <a href="https://github.com/lucasfrsi/react-template-ts/issues">
@@ -131,7 +135,7 @@ Axios allows us to have good defaults to work with JSON data, do more with less 
 
 ### Instant feedback
 
-Enjoy the best DX (Developer eXperience). Your saved changes to JS and CSS files are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code.
+Enjoy the best DX (Developer eXperience). Your saved changes to TS, JS or translation files are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code.
 
 **Packages:** _[webpack] ([HMR]) and [react-refresh]._
 
@@ -299,7 +303,7 @@ Feel free to submit issues or create PRs, contributions are very welcome!
 
 ## To-Dos
 
-[ ] Add [stylelint]
+[] Add [stylelint]
 
 ## License
 
