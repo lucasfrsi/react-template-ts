@@ -303,7 +303,7 @@ Feel free to submit issues or create PRs, contributions are very welcome!
 
 ## To-Dos
 
-[] Add [stylelint]
+- [ ] Add [stylelint]
 
 ## License
 
