@@ -297,17 +297,22 @@ npm start
 
 You can now access the application at http://localhost:8080/.
 
+## To-Dos
+
+- [ ] Developer's Guide Packages section
+- [ ] Add [stylelint]
+
 ## Contributing
 
 Feel free to submit issues or create PRs, contributions are very welcome!
 
-## To-Dos
+## Credits
 
-- [ ] Add [stylelint]
+This project was inspired by [react-boilerplate-cra-template].
 
 ## License
 
-react-template-ts is [MIT] licensed.
+**react-template-ts** is [MIT] licensed.
 
 [//]: # 'Reference Links'
 [@reduxjs/toolkit]: https://github.com/reduxjs/redux-toolkit
@@ -348,4 +353,5 @@ react-template-ts is [MIT] licensed.
 [nvm]: https://github.com/nvm-sh/nvm
 [docker]: https://docs.docker.com/get-docker/
 [release notes]: https://github.com/lucasfrsi/react-template-ts/releases
+[react-boilerplate-cra-template]: https://github.com/react-boilerplate/react-boilerplate-cra-template
 [mit]: https://github.com/lucasfrsi/react-template-ts/blob/main/LICENSE
