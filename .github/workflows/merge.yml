@@ -1,0 +1,30 @@
+name: Merge
+
+on:
+  push:
+    # Run when code is pushed to main branch, either directly (not recommended) or
+    # via PR merge.
+    branches:
+      - main
+    # Changes done to these paths are ignored, no jobs are run
+    paths-ignore:
+      - '.github/**'
+      - '!.github/workflows/**'
+      - '.husky/**'
+      - '.vscode/**'
+      - 'docs/**'
+      - 'internals/**'
+      - '**.md'
+
+jobs:
+  double-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Lint
+        run: make lint
+
+      - name: Test
+        run: make test

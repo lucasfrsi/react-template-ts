@@ -1,0 +1,35 @@
+name: Pull Request
+
+on:
+  # Run when PRs are opened, synchronized or reopened
+  pull_request:
+    branches:
+      - main
+    # Changes done to these paths are ignored, no jobs are run
+    paths-ignore:
+      - '.github/**'
+      - '!.github/workflows/**'
+      - '.husky/**'
+      - '.vscode/**'
+      - 'docs/**'
+      - 'internals/**'
+      - '**.md'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Lint
+        run: make lint
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: make test
