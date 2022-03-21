@@ -17,7 +17,7 @@ function* getPokemon() {
   yield delay(1000);
 
   const nameOrId: string = yield select(selectNameOrId);
-  if (nameOrId.length === 0) {
+  if (!nameOrId.length) {
     yield put(pokemonActions.pokemonError());
     return;
   }
