@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import sanitize from './sanitize';
+import CSSReset from './CSSReset';
 
 const GlobalStyle = createGlobalStyle`
-  ${sanitize}
+  /* Custom CSS Reset */
+  ${CSSReset}
 
+  /* Opinionated Defaults */
   html {
     /* 1rem = 10px */
     font-size: 62.5%;

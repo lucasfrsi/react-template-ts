@@ -1,10 +1,9 @@
 import { css } from 'styled-components';
 
+/*
+ * Use the default System UI and Monospace UI fonts in all browsers.
+ */
 export default css`
-  /**
-  * Use the default user interface font in all browsers (opinionated).
-  */
-
   html {
     font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
       /* Windows 6+ */ 'Segoe UI', /* Android 4+ */ 'Roboto',
@@ -15,8 +14,6 @@ export default css`
       /* Windows emoji */ 'Segoe UI Symbol',
       /* Linux emoji */ 'Noto Color Emoji';
   }
-
-  // Use the default monospace user interface font in all browsers (opinionated).
 
   code,
   kbd,
