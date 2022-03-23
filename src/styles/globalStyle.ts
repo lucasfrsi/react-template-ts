@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import CSSReset from './CSSReset';
+import cssReset from './cssReset';
 
 const GlobalStyle = createGlobalStyle`
   /* Custom CSS Reset */
-  ${CSSReset}
+  ${cssReset}
 
   /* Opinionated Defaults */
   html {

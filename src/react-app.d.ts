@@ -1,3 +1,6 @@
+// https://styled-components.com/docs/api#usage-with-typescript
+/// <reference types="styled-components/cssprop" />
+
 declare module '*.png' {
   const src: string;
   export default src;
