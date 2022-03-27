@@ -4,7 +4,6 @@
   },
   "themesFeature": {
     "selectTheme": "select a theme",
-    "system": "System",
     "light": "Light",
     "dark": "Dark"
   },

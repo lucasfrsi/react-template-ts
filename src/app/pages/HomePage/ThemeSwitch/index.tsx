@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { themeActions } from 'styles/theme/slice';
-import { saveTheme } from 'styles/theme/utils';
-import { selectThemeKey } from 'styles/theme/slice/selectors';
 import { useTranslation } from 'react-i18next';
-import { ThemeKeyType } from 'styles/theme/slice/types';
-import { useAppDispatch, useAppSelector } from 'hooks';
+import { useTheme } from 'styles/theme/ThemeProvider';
+import { ThemeType } from 'styles/theme/themes';
+import { cvar } from 'styles';
+import { saveTheme } from 'styles/theme/utils';
 
 const Wrapper = styled.div`
-  background-color: ${(p) => p.theme.backgroundVariant};
+  background-color: ${cvar('--color-background-variant')};
   padding: 1rem;
 
   label {
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
     align-items: center;
     cursor: pointer;
     width: 7.5rem;
-    color: ${(p) => p.theme.textSecondary};
+    color: ${cvar('--color-text-secondary')};
 
     input {
       cursor: inherit;
@@ -46,29 +45,18 @@ const ThemeOptions = styled.div`
 
 function ThemeSwitch() {
   const { t } = useTranslation();
-  const theme = useAppSelector(selectThemeKey);
-  const dispatch = useAppDispatch();
+  const { theme, setTheme } = useTheme();
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value as ThemeKeyType;
+    const value = event.target.value as ThemeType;
+    setTheme(value);
     saveTheme(value);
-    dispatch(themeActions.changeTheme(value));
   };
 
   return (
     <Wrapper>
       <Title>{t('themesFeature.selectTheme')}</Title>
       <ThemeOptions>
-        <label htmlFor="system">
-          <input
-            type="radio"
-            id="system"
-            value="system"
-            checked={theme === 'system'}
-            onChange={handleThemeChange}
-          />
-          <span>{t('themesFeature.system')}</span>
-        </label>
         <label htmlFor="light">
           <input
             type="radio"

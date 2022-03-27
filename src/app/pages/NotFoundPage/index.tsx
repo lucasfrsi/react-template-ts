@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { cvar } from 'styles';
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,10 +23,10 @@ const Wrapper = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
-  color: ${(p) => p.theme.textSecondary};
+  color: ${cvar('--color-text-secondary')};
 
   &:hover {
-    color: ${(p) => p.theme.text};
+    color: ${cvar('--color-text')};
     text-decoration: underline;
   }
 

@@ -1,28 +1,31 @@
-const lightTheme = {
-  primary: 'rgba(215,113,88,1)',
-  text: 'rgba(58,52,51,1)',
-  textSecondary: 'rgba(58,52,51,0.7)',
-  background: 'rgba(255,255,255,1)',
-  backgroundVariant: 'rgba(251,249,249,1)',
-  border: 'rgba(58,52,51,0.12)',
-  borderLight: 'rgba(58,52,51,0.05)',
+// === THEMES ==============================================
+// ====================================================== //
+
+const light = {
+  '--color-primary': '#d77158ff',
+  '--color-text': '#3a3433ff',
+  '--color-text-secondary': '#3a3433b3',
+  '--color-background': '#ffffffff',
+  '--color-background-variant': '#fbf9f9ff',
+  '--color-border': '#3a34331f',
+  '--color-border-light': '#3a34330d',
 };
 
-const darkTheme: Theme = {
-  primary: 'rgba(220,120,95,1)',
-  text: 'rgba(241,233,231,1)',
-  textSecondary: 'rgba(241,233,231,0.6)',
-  background: 'rgba(0,0,0,1)',
-  backgroundVariant: 'rgba(28,26,26,1)',
-  border: 'rgba(241,233,231,0.15)',
-  borderLight: 'rgba(241,233,231,0.05)',
+const dark: Theme = {
+  '--color-primary': '#dc785fff',
+  '--color-text': '#f1e9e7ff',
+  '--color-text-secondary': '#f1e9e799',
+  '--color-background': '#000000ff',
+  '--color-background-variant': '#1c1a1aff',
+  '--color-border': '#f1e9e726',
+  '--color-border-light': '#f1e9e70d',
 };
-
-export type Theme = typeof lightTheme;
 
 const themes = {
-  light: lightTheme,
-  dark: darkTheme,
+  light,
+  dark,
 };
 
+export type Theme = typeof light;
+export type ThemeType = keyof typeof themes;
 export default themes;

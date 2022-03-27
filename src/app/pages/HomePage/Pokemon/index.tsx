@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import LoadingIndicator from 'components/LoadingIndicator';
 import Image from 'components/Image';
+import { cvar } from 'styles';
 import {
   selectNameOrId,
   selectPokemon,
@@ -17,7 +18,7 @@ const PokemonBox = styled.div`
 `;
 
 const PokemonTopBar = styled.div`
-  background-color: ${(p) => p.theme.backgroundVariant};
+  background-color: var(--color-background-variant);
   padding: 0.5rem;
   display: flex;
   font-weight: 500;
@@ -34,7 +35,7 @@ const PokemonBottomBar = styled.div`
 `;
 
 const PokemonStat = styled.div`
-  background-color: ${(p) => p.theme.backgroundVariant};
+  background-color: var(--color-background-variant);
   padding: 0.5rem;
   width: 100%;
 
@@ -47,7 +48,7 @@ const PokemonStat = styled.div`
   }
 
   i {
-    color: ${(p) => p.theme.textSecondary};
+    color: ${cvar('--color-text-secondary')};
     font-style: normal;
   }
 `;
@@ -70,18 +71,18 @@ const PokeForm = styled.form`
 
   input {
     background-color: transparent;
-    border: 1px solid ${(p) => p.theme.border};
+    border: 1px solid ${cvar('--color-border')};
     padding: 0.25rem 0.3rem;
     width: 100%;
 
     &:focus {
       outline: none;
-      border: 1px solid ${(p) => p.theme.primary};
+      border: 1px solid ${cvar('--color-primary')};
     }
 
     &::placeholder {
       font-size: inherit;
-      color: ${(p) => p.theme.textSecondary};
+      color: ${cvar('--color-text-secondary')};
     }
   }
 `;

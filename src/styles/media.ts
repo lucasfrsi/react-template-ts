@@ -1,6 +1,5 @@
-/**
- * Media queries utility
- */
+// === MEDIA QUERIES UTILITY ===============================
+// ====================================================== //
 
 import {
   css,
@@ -13,11 +12,13 @@ import {
 } from 'styled-components';
 
 // Breakpoints
-export const sizes = {
-  small: 600,
-  medium: 1024,
-  large: 1440,
-  xlarge: 1920,
+const sizes = {
+  xs: 480,
+  sm: 768,
+  md: 1024,
+  lg: 1200,
+  xl: 1440,
+  xxl: 1600,
 };
 
 // Iterate through the sizes and create a media template
@@ -48,12 +49,15 @@ type MediaFunction = <P extends object>(
   ...interpolations: Array<Interpolation<ThemedStyledProps<P, DefaultTheme>>>
 ) => FlattenInterpolation<ThemedStyledProps<P, DefaultTheme>>;
 
-/* Example
-const SomeDiv = styled.div`
-  display: flex;
-  ....
-  ${media.medium`
-    display: block
-  `}
-`;
+/* 
+  >> How to use:
+
+  const SomeDiv = styled.div`
+    display: flex;
+    ...
+
+    ${media.md`
+      display: block;
+    `}
+  `;
 */

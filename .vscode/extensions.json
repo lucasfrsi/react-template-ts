@@ -13,6 +13,7 @@
     "mhutchie.git-graph",
     "ms-vscode-remote.remote-wsl",
     "esbenp.prettier-vscode",
-    "tombonnike.vscode-status-bar-format-toggle"
+    "tombonnike.vscode-status-bar-format-toggle",
+    "huizhou.githd"
   ]
 }

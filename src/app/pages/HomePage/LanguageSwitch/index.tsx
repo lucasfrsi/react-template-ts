@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { cvar } from 'styles';
 
 const Wrapper = styled.div`
   display: flex;
-  background-color: ${(p) => p.theme.backgroundVariant};
+  background-color: ${cvar('--color-background-variant')};
   padding: 1rem;
 
   label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: ${(p) => p.theme.textSecondary};
+    color: ${cvar('--color-text-secondary')};
 
     input {
       cursor: inherit;
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
     span {
       font-size: 2rem;
       margin-left: 0.5rem;
-      color: ${(p) => p.theme.text};
+      color: ${cvar('--color-text')};
     }
   }
 `;

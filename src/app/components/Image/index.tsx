@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { cvar } from 'styles';
 
 const ImgWrapper = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const ImgWrapper = styled.div`
   width: 100%;
   height: 22.3rem;
 
-  border: 4px solid ${(p) => p.theme.borderLight};
+  border: 4px solid ${cvar('--color-border-light')};
   margin: 0.5rem 0;
 
   img {

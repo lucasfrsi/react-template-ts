@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
+import { cvar } from 'styles';
 
 const speed = 1.5;
 
@@ -34,7 +35,7 @@ const Svg = styled.svg<{ small: boolean }>`
 
 const Circle = styled.circle`
   animation: ${dash} ${speed}s ease-in-out infinite;
-  stroke: ${(p) => p.theme.primary};
+  stroke: ${cvar('--color-primary')};
   stroke-linecap: round;
 `;
 

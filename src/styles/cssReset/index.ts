@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import systemFonts from './systemFonts';
 import typography from './typography';
 
-export default css`
+const cssReset = css`
   /*
    * Normalize typography across all browsers by 
    * using System UI fonts
@@ -76,3 +76,5 @@ export default css`
     overflow-wrap: break-word;
   }
 `;
+
+export default cssReset;

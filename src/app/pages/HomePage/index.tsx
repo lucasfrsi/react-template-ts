@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
+import { cvar } from 'styles';
 import ThemeSwitch from './ThemeSwitch';
 import LanguageSwitch from './LanguageSwitch';
 import Pokemon from './Pokemon';
 
 const Wrapper = styled.div`
-  border: 2px solid ${(p) => p.theme.border};
+  border: 2px solid ${cvar('--color-border')};
   padding: 1rem;
 `;
 
