@@ -299,7 +299,7 @@ You can now access the application at http://localhost:8080/.
 
 ## To-Dos
 
-- [x] Write the Developer's Guide Packages section
+- [x] Developer's Guide
 - [ ] Add script to clean example code
 - [ ] Add [commitlint] to the CI
 - [ ] Add [stylelint]

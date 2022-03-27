@@ -1,10 +1,8 @@
 # Developer's Guide
 
-This document will guide you on how to set up your development environment as well as how to work with this project and the packages it uses.
+This document will guide you on how to set up your development environment as well as how to work with this project.
 
-## Table of Contents
-
-### General
+**Table of Contents**
 
 - [Creating a repository from a template](#creating-a-repository-from-a-template)
 - [Prerequisite software](#prerequisite-software)
@@ -13,18 +11,6 @@ This document will guide you on how to set up your development environment as we
 - [Running tests](#running-tests)
 - [Committing your changes](#committing-your-changes)
 - [Building your application](#building-your-application)
-
-### Packages
-
-- [redux](#redux)
-- [axios](#axios)
-- [i18next](#i18next)
-- [react-helmet-async](#react-helmet-async)
-- [react-router-dom](#react-router-dom)
-- [styled-components](#styled-components)
-- [jest and testing-library](#jest-and-testing-library)
-
-# General
 
 ## Creating a repository from a template
 
@@ -63,7 +49,7 @@ This command is different from `npm install` because it will never write to **pa
 
 ### `Docker` & `Docker Compose`
 
-This project comes ready to be used with Docker, but I highly recommend having Node.js plus the NPM modules installed for local development, since it helps your code editor or IDE. Remember that if you use [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Docker Compose](https://docs.docker.com/compose/install/) should already be installed on your machine, but if you're on a Linux machine you need to install it.
+This project comes ready to be used with Docker, but I highly recommend having Node.js plus the NPM modules installed for local development, since it helps your code editor or IDE. Remember that if you use [Docker Desktop](https://www.docker.com/products/docker-desktop/), [Docker Compose](https://docs.docker.com/compose/install/) should already be installed on your machine, but if you're on a Linux machine you need to install it separately.
 
 To run the development server within a container you can use the following command:
 
@@ -273,111 +259,3 @@ make serve
 ```
 
 If you need to build a Docker image for your application I recommend you to add the Docker commands to the Makefile, creating your own commands.
-
-# Packages
-
-## redux
-
-The global state management in this project is handled by Redux and its ecosystem. You can find the store configuration in `./src/store/index.ts`. By default it adds `redux-logger` only in development. In this same folder you'll also find the **`rootReducer`** and **`rootSaga`**.
-
-`./src/store/reducers.ts`
-
-```typescript
-import { combineReducers } from '@reduxjs/toolkit';
-
-const rootReducer = combineReducers({
-  // import and add your reducers here
-});
-
-export default rootReducer;
-export type RootState = ReturnType<typeof rootReducer>;
-```
-
-`./src/store/sagas.ts`
-
-```typescript
-import { all } from 'redux-saga/effects';
-
-export default function* rootSaga() {
-  yield all([
-    // import and add your sagas here
-  ]);
-}
-```
-
-### @reduxjs/toolkit
-
-This project actually uses Redux Toolkit for a standard way to write Redux logic. It's recommended that you structure your files using a "feature folder" approach (all files for a feature in the same folder). Within a given feature folder, the Redux logic for that feature should be written as a single "slice" file, preferably using the Redux Toolkit `createSlice` API.
-
-Although that's strongly recommended, feel free to do things your way, as long as it works for you and/or your team. Here's how I structure my code:
-
-```
-├── ...
-├── components
-│   ├── mycomponent
-│       ├── slice               # Folder containing all redux logic
-│           ├── index.ts        # createSlice() + export reducer and actions
-│           ├── sagas.ts        # sagas
-│           ├── selectors.ts    # selectors
-│           └── types.ts        # local types - for state, etc.
-│       └── index.tsx
-│   └── ...
-└── ...
-```
-
-Read the `@reduxjs/toolkit` documentation [here](https://redux-toolkit.js.org/introduction/getting-started).
-
-### react-redux
-
-Normally you would import `useDispatch` and `useSelector` directly from the **react-redux** package, but since this project uses TypeScript, it's better to define typed hooks.
-
-For `useDispatch` we actually extract the RootState type and dispatch type from the store. By doing that we infer the types according to our state slices. That's also useful for `useSelector`, since it saves us the need to type `(state: RootState)` every time. You can find their exports in `./src/app/hooks/redux.ts`.
-
-```typescript
-// Import them like this, and use them just like their normal counterpart
-import { useAppDispatch, useAppSelector } from 'hooks';
-```
-
-Read the `react-redux` documentation [here](https://react-redux.js.org/introduction/getting-started).
-
-### redux-saga
-
-When you need to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) use Redux Saga, since it's easier to manage, more efficient to execute, easy to test, and better at handling failures.
-
-Think of a saga as a separate thread in your application that's solely responsible for side effects. Redux Saga is a Redux middleware, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.
-
-I highly recommend you to go to their documentation if you're not familiar with it and you should also know about ES6 generators, since Redux Saga uses it to make those asynchronous flows easy to read, write and test.
-
-**Note:** the main difference between Redux Saga and Redux Thunk is that you don't end up in callback hell, you can test your asynchronous flows easily and your actions stay pure.
-
-Read the `redux-saga` documentation [here](https://redux-saga.js.org/docs/introduction/GettingStarted).
-
-## axios
-
-Read the `axios` documentation [here](https://axios-http.com/docs/intro).
-
-## i18next
-
-### react-i18next
-
-Read the `react-i18next` documentation [here](https://react.i18next.com/).
-
-## react-helmet-async
-
-Read about `react-helmet-async` [here](https://github.com/staylor/react-helmet-async).
-
-## react-router-dom
-
-Read the `react-router-dom` documentation [here](https://reactrouter.com/docs/en/v6).
-
-## styled-components
-
-Read the `styled-components` documentation [here](https://styled-components.com/docs).
-
-## prop-types
-
-Read the `prop-types` documentation [here](https://github.com/facebook/prop-types).
-
-## jest and testing-library
-
-Read the `jest` documentation [here](https://jestjs.io/docs/getting-started) and the `testing-library` [here](https://testing-library.com/docs/react-testing-library/intro).

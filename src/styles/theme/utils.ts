@@ -1,7 +1,6 @@
 import { localStorageAvailable } from 'utils';
 import { ThemeType } from './themes';
 
-/* istanbul ignore next line */
 function getSysthemPreference(): ThemeType {
   const isSystemDark = window.matchMedia
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -10,13 +9,11 @@ function getSysthemPreference(): ThemeType {
   return isSystemDark ? 'dark' : 'light';
 }
 
-/* istanbul ignore next line */
 function updateDataAttribute(theme: ThemeType) {
   const html = document.documentElement;
   html.dataset.theme = theme;
 }
 
-/* istanbul ignore next line */
 export function getInitialTheme(): ThemeType {
   let theme: ThemeType;
 
@@ -31,7 +28,6 @@ export function getInitialTheme(): ThemeType {
   return theme;
 }
 
-/* istanbul ignore next line */
 export function saveTheme(theme: ThemeType) {
   updateDataAttribute(theme);
   if (localStorageAvailable) localStorage.setItem('theme', theme);
