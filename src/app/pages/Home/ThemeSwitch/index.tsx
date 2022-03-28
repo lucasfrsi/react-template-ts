@@ -24,13 +24,14 @@ const Wrapper = styled.div`
     }
 
     span {
+      font-size: ${cvar('--font-size-5')};
       margin-top: 0.3rem;
     }
   }
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: ${cvar('--font-size-4')};
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;

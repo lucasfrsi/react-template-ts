@@ -15,7 +15,7 @@ const LoadingWrapper = styled.div`
   justify-content: center;
 `;
 
-export const HomePage = lazyLoad(
+export const Home = lazyLoad(
   () => import('./index'),
   <LoadingWrapper>
     <LoadingIndicator />

@@ -9,7 +9,7 @@ const rotate = keyframes`
   100% {
     transform: rotate(360deg);
   }
-  `;
+`;
 
 const dash = keyframes`
   0% {
@@ -24,9 +24,9 @@ const dash = keyframes`
     stroke-dasharray: 0, 150;
     stroke-dashoffset: -124;
   }
-  `;
+`;
 
-const Svg = styled.svg<{ small: boolean }>`
+const SVG = styled.svg<{ small: boolean }>`
   animation: ${rotate} ${speed * 1.75}s linear infinite;
   height: ${(p) => (p.small ? '1.6rem' : '3rem')};
   width: ${(p) => (p.small ? '1.6rem' : '3rem')};
@@ -44,9 +44,9 @@ type LoadingIndicatorProps = {
 };
 
 const LoadingIndicator = ({ small }: LoadingIndicatorProps) => (
-  <Svg viewBox="-24 -24 48 48" small={small}>
+  <SVG viewBox="-24 -24 48 48" small={small}>
     <Circle cx="0" cy="0" r="20" fill="none" strokeWidth="4" />
-  </Svg>
+  </SVG>
 );
 
 LoadingIndicator.propTypes = {

@@ -1,7 +1,7 @@
 import { localStorageAvailable } from 'utils';
 import { ThemeType } from './themes';
 
-function getSysthemPreference(): ThemeType {
+function getSystemPreference(): ThemeType {
   const isSystemDark = window.matchMedia
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
     : false;
@@ -19,9 +19,9 @@ export function getInitialTheme(): ThemeType {
 
   if (localStorageAvailable) {
     const storedTheme = localStorage.getItem('theme') as ThemeType | null;
-    theme = storedTheme || getSysthemPreference();
+    theme = storedTheme || getSystemPreference();
   } else {
-    theme = getSysthemPreference();
+    theme = getSystemPreference();
   }
 
   updateDataAttribute(theme);

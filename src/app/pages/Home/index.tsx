@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   padding: 1rem;
 `;
 
-function HomePage() {
+function Home() {
   return (
     <>
       <Helmet>
@@ -31,4 +31,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

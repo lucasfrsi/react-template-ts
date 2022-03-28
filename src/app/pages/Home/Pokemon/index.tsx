@@ -18,7 +18,7 @@ const PokemonBox = styled.div`
 `;
 
 const PokemonTopBar = styled.div`
-  background-color: var(--color-background-variant);
+  background-color: ${cvar('--color-background-variant')};
   padding: 0.5rem;
   display: flex;
   font-weight: 500;
@@ -91,12 +91,10 @@ const LoadingWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin: 0 0 0 0.5rem;
-  width: 1.8rem;
+  width: 3rem;
 
   text-align: center;
-  font-size: 1.4rem;
+  font-size: ${cvar('--font-size-5')};
   color: white;
 `;
 

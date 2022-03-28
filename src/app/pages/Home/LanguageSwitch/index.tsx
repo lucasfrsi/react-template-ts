@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     }
 
     span {
-      font-size: 2rem;
+      font-size: ${cvar('--font-size-5')};
       margin-left: 0.5rem;
       color: ${cvar('--color-text')};
     }
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: ${cvar('--font-size-4')};
   font-weight: 300;
   text-transform: uppercase;
   margin-right: auto;
@@ -53,7 +53,7 @@ function LanguageSwitch() {
           checked={i18n.language.split('-')[0] === 'en'}
           onChange={handleLanguageChange}
         />
-        <span>🇺🇸</span>
+        <span>US</span>
       </label>
       <label htmlFor="pt-BR">
         <input
@@ -63,7 +63,7 @@ function LanguageSwitch() {
           checked={i18n.language.split('-')[0] === 'pt'}
           onChange={handleLanguageChange}
         />
-        <span>🇧🇷</span>
+        <span>BR</span>
       </label>
     </Wrapper>
   );

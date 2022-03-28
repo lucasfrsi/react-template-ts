@@ -1,5 +1,5 @@
 /**
- * index.jsx
+ * index.tsx
  *
  * This is the entry file for the app, only setup and boilerplate code.
  */

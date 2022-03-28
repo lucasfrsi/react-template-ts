@@ -11,11 +11,11 @@ const Wrapper = styled.div`
   align-items: center;
 
   h1 {
-    font-size: 4rem;
+    font-size: ${cvar('--font-size-2')};
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: ${cvar('--font-size-3')};
     margin-bottom: 2rem;
   }
 `;
@@ -35,13 +35,13 @@ const StyledLink = styled(Link)`
   }
 `;
 
-function NotFoundPage() {
+function NotFound() {
   const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>404 Page Not Found</title>
+        <title>404 - Page Not Found</title>
         <meta name="description" content="Page not found" />
       </Helmet>
       <Wrapper>
@@ -53,4 +53,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default NotFound;

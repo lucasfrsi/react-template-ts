@@ -16,7 +16,11 @@ const Wrapper = styled.div`
   transition: all 0.25s ease-in-out;
 `;
 
-function Layout({ children }: { children: React.ReactNode }) {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+function Layout({ children }: LayoutProps) {
   return <Wrapper>{children}</Wrapper>;
 }
 

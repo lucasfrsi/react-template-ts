@@ -14,8 +14,8 @@ import GlobalStyle from 'styles/globalStyle';
 import favicon from 'assets/images/favicon.png';
 
 import Layout from './components/Layout';
-import { HomePage } from './pages/HomePage/Loadable';
-import { NotFoundPage } from './pages/NotFoundPage/Loadable';
+import { Home } from './pages/Home/Loadable';
+import { NotFound } from './pages/NotFound/Loadable';
 
 function App() {
   const { i18n } = useTranslation();
@@ -33,8 +33,8 @@ function App() {
 
       <Layout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
 

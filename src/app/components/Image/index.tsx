@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { cvar } from 'styles';
 
-const ImgWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  width: 22.3rem;
   height: 22.3rem;
 
   border: 4px solid ${cvar('--color-border-light')};
@@ -33,9 +33,9 @@ function Image({ src, fallbackSrc, alt }: ImageProps) {
   };
 
   return (
-    <ImgWrapper>
+    <Wrapper>
       {src ? <img src={src} onError={handleOnError} alt={alt!} /> : null}
-    </ImgWrapper>
+    </Wrapper>
   );
 }
 

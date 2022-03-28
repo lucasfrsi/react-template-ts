@@ -15,7 +15,7 @@ const LoadingWrapper = styled.div`
   justify-content: center;
 `;
 
-export const NotFoundPage = lazyLoad(
+export const NotFound = lazyLoad(
   () => import('./index'),
   <LoadingWrapper>
     <LoadingIndicator />
