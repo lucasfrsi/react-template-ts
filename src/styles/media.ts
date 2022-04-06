@@ -12,7 +12,7 @@ import {
 } from 'styled-components';
 
 // Breakpoints
-const sizes = {
+export const sizes = {
   xs: 480,
   sm: 768,
   md: 1024,
@@ -22,7 +22,7 @@ const sizes = {
 };
 
 // Iterate through the sizes and create a media template
-export const media = (Object.keys(sizes) as Array<keyof typeof sizes>).reduce(
+const media = (Object.keys(sizes) as Array<keyof typeof sizes>).reduce(
   (acc, label) => {
     // eslint-disable-next-line no-param-reassign
     acc[label] = (first: any, ...interpolations: any[]) => css`
@@ -35,6 +35,8 @@ export const media = (Object.keys(sizes) as Array<keyof typeof sizes>).reduce(
   },
   {} as { [key in keyof typeof sizes]: MediaFunction }
 );
+
+export default media;
 
 /*
  * Taken from https://github.com/DefinitelyTyped/DefinitelyTyped/issues/32914

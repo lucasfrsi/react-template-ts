@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import GlobalStyle from 'styles/globalStyle';
+import { GlobalStyle } from 'styles';
 import favicon from 'assets/images/favicon.png';
 
 import Layout from './components/Layout';

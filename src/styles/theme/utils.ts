@@ -1,7 +1,7 @@
 import { localStorageAvailable } from 'utils';
 import { ThemeType } from './themes';
 
-function getSystemPreference(): ThemeType {
+export function getSystemPreference(): ThemeType {
   const isSystemDark = window.matchMedia
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
     : false;
@@ -9,7 +9,7 @@ function getSystemPreference(): ThemeType {
   return isSystemDark ? 'dark' : 'light';
 }
 
-function updateDataAttribute(theme: ThemeType) {
+export function updateDataAttribute(theme: ThemeType) {
   const html = document.documentElement;
   html.dataset.theme = theme;
 }
@@ -24,7 +24,6 @@ export function getInitialTheme(): ThemeType {
     theme = getSystemPreference();
   }
 
-  updateDataAttribute(theme);
   return theme;
 }
 

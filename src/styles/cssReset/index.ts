@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import STYLE from 'styles/constants';
 import systemFonts from './systemFonts';
 import typography from './typography';
 
@@ -34,7 +35,7 @@ const cssReset = css`
    * Typographic tweaks
    */
   body {
-    line-height: 1.5;
+    line-height: ${STYLE.lineHeight.body};
     -webkit-font-smoothing: antialiased;
   }
 

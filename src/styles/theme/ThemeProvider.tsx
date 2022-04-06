@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useState, useMemo } from 'react';
-import { ThemeType } from '../themes';
-import { getInitialTheme } from '../utils';
+import { ThemeType } from './themes';
+import { getInitialTheme, updateDataAttribute } from './utils';
 
 interface ThemeContextProps {
   theme: ThemeType;
@@ -12,6 +12,8 @@ interface ThemeProviderProps {
 }
 
 const initialTheme = getInitialTheme();
+updateDataAttribute(initialTheme);
+
 const ThemeContext = React.createContext({} as ThemeContextProps);
 
 function ThemeProvider({ children }: ThemeProviderProps) {

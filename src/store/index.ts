@@ -3,7 +3,7 @@ import createSagaMiddleware, { SagaMiddleware } from 'redux-saga';
 import rootReducer from './reducers';
 import rootSaga from './sagas';
 
-function configureAppStore() {
+export function configureAppStore() {
   const middlewares: (SagaMiddleware | Middleware)[] = [];
 
   // Redux-Saga Middleware

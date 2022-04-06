@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { cvar } from 'styles';
+import { cvar, STYLE } from 'styles';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,16 +11,17 @@ const Wrapper = styled.div`
   align-items: center;
 
   h1 {
-    font-size: ${cvar('--font-size-2')};
+    font-size: ${STYLE.font.size.extraLarge};
   }
 
   h2 {
-    font-size: ${cvar('--font-size-3')};
+    font-size: ${STYLE.font.size.large};
     margin-bottom: 2rem;
   }
 `;
 
 const StyledLink = styled(Link)`
+  font-size: ${STYLE.font.size.small};
   text-decoration: none;
   text-transform: uppercase;
   color: ${cvar('--color-text-secondary')};

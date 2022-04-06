@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import { cvar } from 'styles';
+import STYLE from './constants';
 import cssReset from './cssReset';
 import themesCSSVariables from './theme/themesCSSVariables';
-import globalCSSVariables from './globalCSSVariables';
 
 const GlobalStyle = createGlobalStyle`
   /* Custom CSS Reset */
@@ -10,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
 
   /* Themes and Global CSS Variables */
   ${themesCSSVariables}
-  ${globalCSSVariables}
 
   /* Opinionated Defaults */
   html {
@@ -19,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    /* Default the base font-size to 13px */
-    font-size: ${cvar('--font-size-base')};
+    /* Default the base font-size to 16px */
+    font-size: ${STYLE.font.size.base};
   }
 `;
 

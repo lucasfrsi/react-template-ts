@@ -1,33 +1,14 @@
-import { cssVariables, GlobalCSSVariables } from './globalCSSVariables';
-import themes, { Theme, ThemeType } from './theme/themes';
+import { Theme } from './theme/themes';
 
 /**
- * Utility function to get a global or theme CSS Variable name,
- * providing autocompletion.
+ * Utility function to get a theme CSS Variable name.
  * @param cssVariableName
- * @returns `var(cssVariableName)` as `string`
+ * @returns `'var(cssVariableName)'`
  */
-export function cvar(cssVariableName: keyof GlobalCSSVariables | keyof Theme) {
+export function cvar(cssVariableName: keyof Theme) {
   return `var(${cssVariableName})`;
 }
 
-/**
- * Get a global CSS Variable value directly.
- * Use it when `cvar()` is not an option.
- * @param cssVariableName
- * @returns a global CSS Variable value
- */
-export function cvarG(cssVariableName: keyof GlobalCSSVariables) {
-  return cssVariables[cssVariableName];
-}
-
-/**
- * Get a theme CSS Variable value directly.
- * Use it when `cvar()` is not an option.
- * @param theme
- * @param cssVariableName
- * @returns a theme CSS Variable value
- */
-export function cvarT(theme: ThemeType, cssVariableName: keyof Theme) {
-  return themes[theme][cssVariableName];
-}
+export { default as STYLE } from './constants';
+export { default as GlobalStyle } from './globalStyle';
+export { default as media } from './media';
