@@ -146,11 +146,14 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx,js,jsx}",
-      "!src/**/*/*.d.ts",
       "!src/**/*/Loadable.{ts,tsx,js,jsx}",
-      "!src/styles/sanitize/*.ts",
-      "!src/reportWebVitals.ts",
-      "!src/index.tsx"
+      "!src/**/*/*.d.ts",
+      "!src/interfaces/*.ts",
+      "!src/store/*.ts",
+      "!src/styles/cssReset/*.ts",
+      "!src/styles/globalStyle.ts",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts"
     ],
     "coverageThreshold": {
       "global": {
@@ -182,6 +185,7 @@
       "^locales/(.*)$": "<rootDir>/src/locales/$1",
       "^services/(.*)$": "<rootDir>/src/services/$1",
       "^store/(.*)$": "<rootDir>/src/store/$1",
+      "^styles$": "<rootDir>/src/styles",
       "^styles/(.*)$": "<rootDir>/src/styles/$1",
       "^utils$": "<rootDir>/src/utils"
     },

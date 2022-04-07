@@ -300,9 +300,9 @@ You can now access the application at http://localhost:8080/.
 ## To-Dos
 
 - [x] Developer's Guide
+- [ ] Update packages
+- [x] Add tests
 - [ ] Add [commitlint] to the CI
-- [ ] Add tests
-- [ ] Add script to clean example code
 - [ ] Add [stylelint] (holding off until there's a proper way of configuring it without using deprecated packages)
 
 ## Contributing
