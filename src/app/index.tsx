@@ -2,7 +2,8 @@
  * App
  *
  * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g., navigation bar)
+ * contain code that should be seen on all pages. (e.g., Layout component
+ * and routes)
  */
 
 import React from 'react';
@@ -12,10 +13,6 @@ import { useTranslation } from 'react-i18next';
 
 import { GlobalStyle } from 'styles';
 import favicon from 'assets/images/favicon.png';
-
-import Layout from './components/Layout';
-import { Home } from './pages/Home/Loadable';
-import { NotFound } from './pages/NotFound/Loadable';
 
 function App() {
   const { i18n } = useTranslation();
@@ -31,12 +28,12 @@ function App() {
         <link rel="icon" href={favicon} />
       </Helmet>
 
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
+      {/* <Layout> */}
+      <Routes>
+        <Route path="/" element={<p>Hello World!</p>} />
+        <Route path="*" element={<p>404 - Not Found =/</p>} />
+      </Routes>
+      {/* </Layout> */}
 
       <GlobalStyle />
     </BrowserRouter>

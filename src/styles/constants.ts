@@ -5,12 +5,6 @@
 // === COLORS ==============================================
 
 enum Colors {
-  brick = '#d77158ff',
-  brown = 'rgba(58, 52, 51, 1)',
-  brown_opac_1 = 'rgba(58, 52, 51, 0.7)',
-  brown_opac_2 = 'rgba(58, 52, 51, 0.15)',
-  brown_opac_3 = 'rgba(58, 52, 51, 0.05)',
-
   error = '#eb0400',
   warn = '#ffd37a',
   success = '#00f593',

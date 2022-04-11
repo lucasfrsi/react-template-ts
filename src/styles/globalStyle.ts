@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   /* Custom CSS Reset */
   ${cssReset}
 
-  /* Themes and Global CSS Variables */
+  /* Themes CSS Variables */
   ${themesCSSVariables}
 
   /* Opinionated Defaults */

@@ -1,8 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import pokemonReducer from 'pages/Home/Pokemon/slice';
 
 const rootReducer = combineReducers({
-  pokemon: pokemonReducer,
+  // Add your Redux slices here
 });
 
 export default rootReducer;

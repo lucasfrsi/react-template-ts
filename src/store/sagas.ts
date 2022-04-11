@@ -1,6 +1,7 @@
 import { all } from 'redux-saga/effects';
-import pokemonSagas from 'pages/Home/Pokemon/slice/sagas';
 
 export default function* rootSaga() {
-  yield all([...pokemonSagas]);
+  yield all([
+    // Add your Redux Sagas here
+  ]);
 }
