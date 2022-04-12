@@ -8,7 +8,7 @@ updates:
       time: '09:00'
       timezone: 'America/Sao_Paulo'
     commit-message:
-      prefix: 'npm'
+      prefix: 'chore'
       include: 'scope'
 
   - package-ecosystem: 'docker'
@@ -18,7 +18,7 @@ updates:
       time: '09:00'
       timezone: 'America/Sao_Paulo'
     commit-message:
-      prefix: 'docker'
+      prefix: 'chore'
       include: 'scope'
 
   - package-ecosystem: 'github-actions'
