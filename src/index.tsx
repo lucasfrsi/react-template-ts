@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import { createMountElement } from 'utils';
@@ -22,7 +22,8 @@ import App from './app';
 const MOUNT_NODE = createMountElement('root');
 createMountElement('portal');
 
-ReactDOM.render(
+const root = createRoot(MOUNT_NODE);
+root.render(
   <Provider store={store}>
     <ThemeProvider>
       <HelmetProvider>
@@ -31,8 +32,7 @@ ReactDOM.render(
         </React.StrictMode>
       </HelmetProvider>
     </ThemeProvider>
-  </Provider>,
-  MOUNT_NODE
+  </Provider>
 );
 
 // Hot reloadable translation json files

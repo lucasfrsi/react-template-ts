@@ -5,7 +5,7 @@ const presets = [
     '@babel/preset-env',
     {
       useBuiltIns: 'usage',
-      corejs: '3.21.1',
+      corejs: '3.22.3',
     },
   ],
   '@babel/preset-typescript',

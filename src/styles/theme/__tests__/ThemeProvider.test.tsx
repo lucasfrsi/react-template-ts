@@ -11,7 +11,8 @@ const renderThemeProvider = (Child: React.FunctionComponent) =>
   );
 
 describe('<ThemeProvider />', () => {
-  it('should render children and its useTheme hook should work', () => {
+  it('should render children and its useTheme hook should work', async () => {
+    const user = userEvent.setup();
     const child = () => {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       const { theme, setTheme } = useTheme();
@@ -25,7 +26,7 @@ describe('<ThemeProvider />', () => {
     const { getByText } = renderThemeProvider(child);
     expect(getByText('light')).toBeInTheDocument();
 
-    userEvent.click(getByText('light'));
+    await user.click(getByText('light'));
     expect(getByText('dark')).toBeInTheDocument();
   });
 });

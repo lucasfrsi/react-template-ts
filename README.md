@@ -301,8 +301,8 @@ You can now access the application at http://localhost:8080/.
 
 - [x] Developer's Guide
 - [x] Add tests
+- [x] Update React to v18
 - [ ] Add [commitlint] to the CI
-- [ ] Update React to v18
 - [ ] Add [stylelint] (holding off until there's a proper way of configuring it without using deprecated packages)
 
 ## Contributing
