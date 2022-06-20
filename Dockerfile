@@ -1,6 +1,6 @@
 #syntax=docker/dockerfile:1
 # Command: make bootstrap
-FROM node:16.14.2-alpine AS dependencies
+FROM node:18.4.0-alpine AS dependencies
 
 WORKDIR /code
 
