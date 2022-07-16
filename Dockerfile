@@ -24,7 +24,7 @@ RUN npm run build
 
 
 # Command: make serve
-FROM nginx:1.21.6-alpine AS prod
+FROM nginx:1.23.0-alpine AS prod
 
 COPY --from=build ./code/build/ /usr/share/nginx/html
 
